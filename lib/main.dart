@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var mainArea = ColoredBox(
       color: colorScheme.surfaceVariant,
       child: AnimatedSwitcher(
-        duration: Duration(milliseconds: 200),
+        duration: Duration(milliseconds: 2000),
         child: page,
       ),
     );
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: LayoutBuilder(
         builder: (context, constraints) {
-          if (constraints.maxWidth < 450) {
+          if (constraints.maxWidth < 550) {
             // Use a more mobile-friendly layout with BottomNavigationBar
             // on narrow screens.
             return Column(
@@ -228,7 +228,7 @@ class BigCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: AnimatedSize(
-          duration: Duration(milliseconds: 200),
+          duration: Duration(milliseconds: 2000),
           // Make sure that the compound word wraps correctly when the window
           // is too narrow.
           child: MergeSemantics(
